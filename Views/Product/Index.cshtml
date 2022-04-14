@@ -32,9 +32,13 @@
                     $('#product_rows').html("");
                     for (var i = 0; i < response.length; i++){
                         var row = "<tr>"
-                            + "<td>" + response[i].productName + "</td>"
+                            @* + "<td>" + response[i].productName + "</td>"
                             + "<td>" + response[i].unitPrice + "</td>"
                             + "<td>" + response[i].unitsInStock + "</td>"
+                            + "</tr>"; *@
+                            + "<td>"${response[i].productName}"</td>"
+                            + "<td>"${response[i].unitPrice}"</td>"
+                            + "<td>"${response[i].unitsInStock}"</td>"
                             + "</tr>";
                         $('#product_rows').append(row);
                     }
